@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/fullscreen_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:scaleType="fitXY"
+
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?metaButtonBarStyle"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp"
+            android:src="@drawable/arrow_24"
+            android:layout_gravity="start|left"/>
+        <LinearLayout
+            android:id="@+id/fullscreen_layout"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/image_view_border"
+
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+            <View android:layout_width="match_parent"
+                android:layout_height="30dp"
+                 />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@android:color/transparent"
+                android:padding="10dp">
+                <Button
+                    android:id="@+id/btn_dwnld"
+                    style="?metaButtonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/white"
+                    android:text="@string/btn_download" />
+                <View android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                <ImageButton
+                    android:id="@+id/info_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_info_outline_white_24dp"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+                <ImageButton
+                    android:id="@+id/share_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share_white_24dp"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+                <ImageButton
+                    android:id="@+id/fav_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_favorite_border_white_24dp"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        </FrameLayout>
+</FrameLayout>
